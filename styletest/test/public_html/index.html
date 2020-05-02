@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+   <body>
+    <img
+src="actionnc-2014-white.png"
+      alt="action nc" height="553" width="1308"><br>
+    <b><br>
+    </b>
+    <div align="center"><font size="+3"><b>Register to vote with Action
+          NC. </b></font></div>
+    <br>
+    <script type="text/javascript"  src="https://register.rockthevote.com/assets/rtv-iframe.js"></script>
+<script type="text/javascript">
+    let urlParams = new URLSearchParams(window.location.search.substring(1));
+    RtvIframe.init({
+      partner: 38403,
+      source: urlParams.get('source'),
+      tracking: urlParams.get('tracking')
+    });
+	console.log(urlParams.get('source'));
+</script>
+  </body>
+</html>
