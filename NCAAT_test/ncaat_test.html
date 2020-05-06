@@ -13,7 +13,7 @@
     let urlParams = new URLSearchParams(window.location.search.substring(1));
     RtvIframe.init({
       partner: 38403,
-      source: urlParams.get('source'),
+      source: "test",
       tracking: urlParams.get('tracking')
     });
 	console.log(urlParams.get('source'));
