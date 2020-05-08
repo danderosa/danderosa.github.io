@@ -13,30 +13,8 @@
 				.dynamic-content {
 		display:none;
 	}		</style>
-<script type="text/javascript"  src="https://register.rockthevote.com/assets/rtv-iframe.js"></script>
-<script type="text/javascript">
-    let urlParams = new URLSearchParams(window.location.search.substring(1));
-    RtvIframe.init({
-      partner: 38403,
-      source: urlParams.get('source'),
-      tracking: urlParams.get('tracking')
-    });
-	console.log(urlParams.get('source'));
-</script>
-    <br>
- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script type="text/javascript">
-	// Parse the URL parameter
-	function getParameterByName(name, url) {
-	    if (!url) url = window.location.href;
-	    name = name.replace(/[\[\]]/g, "\\$&");
-	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-	        results = regex.exec(url);
-	    if (!results) return null;
-	    if (!results[2]) return '';
-	    return decodeURIComponent(results[2].replace(/\+/g, " "));
-	}
-	// Give the parameter a variable name
+	<br>
+		// Give the parameter a variable name
 	var dynamicContent = getParameterByName('source');
  
 	 $(document).ready(function() {
@@ -65,8 +43,7 @@
 </div>
 <!-- Dynamic Section 1 -->
 <div id="apples" class="dynamic-content">
-  I like apples
-</div>
+  You may be contacted by apples if you fill out this form.
 <!-- Dynamic Section 2 -->
 <div id="oranges" class="dynamic-content">
   I like oranges
@@ -75,6 +52,31 @@
 <div id="bananas" class="dynamic-content">
   I like bananas
 </div>
+<br>
+<script type="text/javascript"  src="https://register.rockthevote.com/assets/rtv-iframe.js"></script>
+<script type="text/javascript">
+    let urlParams = new URLSearchParams(window.location.search.substring(1));
+    RtvIframe.init({
+      partner: 38403,
+      source: urlParams.get('source'),
+      tracking: urlParams.get('tracking')
+    });
+	console.log(urlParams.get('source'));
+</script>
+    <br>
+ <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+	// Parse the URL parameter
+	function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
     <br>
     <img src="Footer.png" alt="footer" height="600" width="1200"><br>
   </body>
