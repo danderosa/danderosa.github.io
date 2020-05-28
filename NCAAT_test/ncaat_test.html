@@ -13,8 +13,9 @@
     let urlParams = new URLSearchParams(window.location.search.substring(1));
     RtvIframe.init({
       partner: 38403,
-      source: "test",
+      source: "ncaat",
       tracking: urlParams.get('tracking')
+      locale: "zh-tw"
     });
 	console.log(urlParams.get('source'));
 </script>
