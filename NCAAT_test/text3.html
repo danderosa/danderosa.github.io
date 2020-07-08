@@ -1,0 +1,11 @@
+<script type="text/javascript" src="https://register.rockthevote.com/assets/rtv-iframe.js"></script>
+<script type="text/javascript">
+let urlParams = new URLSearchParams(window.location.search.substring(1));
+RtvIframe.init({
+partner: 38403,
+source: "ncaat",
+tracking: urlParams.get('tracking'),
+locale: urlParams.get('locale')
+});
+console.log(urlParams.get('source'));
+</script>
